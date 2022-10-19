@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-19 12:30:25 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTdGT0gyMEI7MjAyMi0xMC0xOTsxMjowNDoyMSBBTTszMjcx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTdGT0gyMEI7MjAyMi0xMC0xOTsxMjozMDoyNSBBTTsxOzMzODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="part" type="Integer" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter part number &quot;" newline="True"/>
+            <input variable="part"/>
+            <output expression="&quot;Enter quantity &quot;" newline="True"/>
+            <input variable="quantity"/>
+            <declare name="ucost" type="Real" array="False" size=""/>
+            <if expression="part == 10 or part == 55">
+                <then>
+                    <assign variable="ucost" expression="1.00"/>
+                </then>
+                <else>
+                    <if expression="part == 80 or part == 70">
+                        <then>
+                            <assign variable="ucost" expression="3.00"/>
+                        </then>
+                        <else>
+                            <if expression="part == 99">
+                                <then>
+                                    <assign variable="ucost" expression="2.00"/>
+                                </then>
+                                <else>
+                                    <assign variable="ucost" expression="5.00"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="ucost*quantity"/>
+            <output expression="&quot;The part number is &quot; &amp; part &amp; &quot; the unit cost is &quot; &amp; ucost &amp; &quot; and the total is &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
