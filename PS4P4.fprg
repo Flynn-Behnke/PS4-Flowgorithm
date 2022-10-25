@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-25 09:51:36 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUEzTzhGSzc7MjAyMi0xMC0yNTswOTo0NjoxMSBBTTszMjkw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUEzTzhGSzc7MjAyMi0xMC0yNTswOTo1MTozNiBBTTsxOzM0MDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quant" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number of concert tickets &quot;" newline="True"/>
+            <input variable="quant"/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <if expression="quant &gt;= 25">
+                <then>
+                    <assign variable="price" expression="50"/>
+                </then>
+                <else>
+                    <if expression="quant &gt;= 10 and quant &lt;= 24">
+                        <then>
+                            <assign variable="price" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="quant &gt;= 5 and quant &lt;= 9">
+                                <then>
+                                    <assign variable="price" expression="70"/>
+                                </then>
+                                <else>
+                                    <assign variable="price" expression="75"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <assign variable="cost" expression="price*quant"/>
+            <output expression="&quot;Number of tickets is &quot; &amp; quant &amp; &quot; the price per ticket is &quot; &amp; price &amp; &quot; the total cost is &quot; &amp; cost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

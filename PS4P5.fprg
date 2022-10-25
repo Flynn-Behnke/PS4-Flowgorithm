@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-25 09:55:34 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUEzTzhGSzc7MjAyMi0xMC0yNTswOTo1MTozOCBBTTszMjk1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUEzTzhGSzc7MjAyMi0xMC0yNTswOTo1NTozNCBBTTsxOzM0MDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lstname" type="String" array="False" size=""/>
+            <declare name="lvl" type="Integer" array="False" size=""/>
+            <declare name="salary" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter last name &quot;" newline="True"/>
+            <input variable="lstname"/>
+            <output expression="&quot;Enter job level &quot;" newline="True"/>
+            <input variable="lvl"/>
+            <output expression="&quot;Enter salary &quot;" newline="True"/>
+            <input variable="salary"/>
+            <declare name="brate" type="Real" array="False" size=""/>
+            <if expression="lvl &gt;= 10">
+                <then>
+                    <assign variable="brate" expression="0.25"/>
+                </then>
+                <else>
+                    <if expression="lvl &gt;= 5 and lvl &lt;= 9">
+                        <then>
+                            <assign variable="brate" expression="0.2"/>
+                        </then>
+                        <else>
+                            <assign variable="brate" expression="0.1"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="bonus" type="Real" array="False" size=""/>
+            <assign variable="bonus" expression="brate*salary"/>
+            <output expression="lstname &amp; &quot; bonus: &quot; &amp; bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
